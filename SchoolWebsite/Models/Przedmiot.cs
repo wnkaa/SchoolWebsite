@@ -18,6 +18,6 @@ namespace SchoolWebsite.Models
 
         public int CourseID { get; set; }
         public virtual ICollection<Course> Courses { get; set; }
-
+        //sprawdzam cie 
     }
 }
