@@ -1,0 +1,52 @@
+﻿@model SchoolWebsite.Models.Contact
+
+@{
+    ViewBag.Title = "Contact";
+    Layout = "~/Views/_LayoutPage.cshtml";
+}
+
+<div class="row">
+
+    <div class="col-lg-8">
+        @using (Html.BeginForm("Contact", "Home", FormMethod.Post, new { @class = "form-horizontal" }))
+        {
+            <fieldset>
+                <legend>Contact us!</legend>
+                <div class="row" style="margin-bottom:10px">
+                    @Html.LabelFor(model => model.Name, new { @class = "col-lg-1 control-label" })
+                    <div class="col-lg-6">
+                        @Html.TextBoxFor(model => model.Name, new { @class = "form-control", @placeholder="Name" })
+                        
+                    </div>
+                    @Html.ValidationMessageFor(m => m.Name)
+                </div>
+                <div class="row" style="margin-bottom:10px">
+                    @Html.LabelFor(model => model.Email, new { @class = "col-lg-1 control-label" })
+                    <div class="col-lg-6">
+                        @Html.TextBoxFor(model => model.Email, new { @class = "form-control", @placeholder = "mail@mail.com"  })
+                    </div>
+                    @Html.ValidationMessageFor(m => m.Email)
+                </div>
+                <div class="row" style="margin-bottom:10px">
+                    @Html.LabelFor(model => model.Text, new { @class = "col-lg-1 control-label" })
+                    <div class="col-lg-6">
+                        @Html.TextAreaFor(model => model.Text, new {@class="form-control", @style="max-width:140%", @placeholder="Text will be here", @rows="3"})
+                        @Html.ValidationMessageFor(m => m.Text)
+                    </div>
+                    
+                </div>
+                <button type="submit" class="col-lg-offset-1 btn-primary">Send</button>
+            </fieldset>
+        }
+    </div>
+    <div class="col-lg-4" style="margin-top:50px">
+        <div class="col-lg-offset-4">
+            <p>Phone number: 123-456-789</p>
+            <p>Email: <a href="mailto:szkola@szkola.pl?Subject=Question">szkola@szkola.pl</a></p>
+            <p></p>
+        </div>
+    </div>
+</div>
+@ViewBag.success
+<script type="text/javascript" src="~/Scripts/jquery.validate.js"></script>
+

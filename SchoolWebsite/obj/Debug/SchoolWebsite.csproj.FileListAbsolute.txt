@@ -1,0 +1,48 @@
+c:\users\wisnia\documents\visual studio 2013\Projects\SchoolWebsite\SchoolWebsite\bin\SchoolWebsite.dll.config
+c:\users\wisnia\documents\visual studio 2013\Projects\SchoolWebsite\SchoolWebsite\bin\SchoolWebsite.dll
+c:\users\wisnia\documents\visual studio 2013\Projects\SchoolWebsite\SchoolWebsite\bin\SchoolWebsite.pdb
+c:\users\wisnia\documents\visual studio 2013\Projects\SchoolWebsite\SchoolWebsite\bin\EntityFramework.dll
+c:\users\wisnia\documents\visual studio 2013\Projects\SchoolWebsite\SchoolWebsite\bin\EntityFramework.SqlServer.dll
+c:\users\wisnia\documents\visual studio 2013\Projects\SchoolWebsite\SchoolWebsite\bin\Ninject.dll
+c:\users\wisnia\documents\visual studio 2013\Projects\SchoolWebsite\SchoolWebsite\bin\System.Web.Helpers.dll
+c:\users\wisnia\documents\visual studio 2013\Projects\SchoolWebsite\SchoolWebsite\bin\System.Web.Mvc.dll
+c:\users\wisnia\documents\visual studio 2013\Projects\SchoolWebsite\SchoolWebsite\bin\System.Web.Razor.dll
+c:\users\wisnia\documents\visual studio 2013\Projects\SchoolWebsite\SchoolWebsite\bin\System.Web.Webpages.Deployment.dll
+c:\users\wisnia\documents\visual studio 2013\Projects\SchoolWebsite\SchoolWebsite\bin\System.Web.Webpages.dll
+c:\users\wisnia\documents\visual studio 2013\Projects\SchoolWebsite\SchoolWebsite\bin\System.Web.Webpages.Razor.dll
+c:\users\wisnia\documents\visual studio 2013\Projects\SchoolWebsite\SchoolWebsite\bin\EntityFramework.xml
+c:\users\wisnia\documents\visual studio 2013\Projects\SchoolWebsite\SchoolWebsite\bin\EntityFramework.SqlServer.xml
+c:\users\wisnia\documents\visual studio 2013\Projects\SchoolWebsite\SchoolWebsite\bin\Ninject.xml
+c:\users\wisnia\documents\visual studio 2013\Projects\SchoolWebsite\SchoolWebsite\bin\System.Web.Razor.xml
+c:\users\wisnia\documents\visual studio 2013\Projects\SchoolWebsite\SchoolWebsite\bin\System.Web.Webpages.xml
+c:\users\wisnia\documents\visual studio 2013\Projects\SchoolWebsite\SchoolWebsite\bin\System.Web.Webpages.Deployment.xml
+c:\users\wisnia\documents\visual studio 2013\Projects\SchoolWebsite\SchoolWebsite\bin\System.Web.Webpages.Razor.xml
+c:\users\wisnia\documents\visual studio 2013\Projects\SchoolWebsite\SchoolWebsite\bin\System.Web.Helpers.xml
+c:\users\wisnia\documents\visual studio 2013\Projects\SchoolWebsite\SchoolWebsite\bin\System.Web.Mvc.xml
+c:\users\wisnia\documents\visual studio 2013\Projects\SchoolWebsite\SchoolWebsite\obj\Debug\SchoolWebsite.csprojResolveAssemblyReference.cache
+c:\users\wisnia\documents\visual studio 2013\Projects\SchoolWebsite\SchoolWebsite\obj\Debug\SchoolWebsite.dll
+c:\users\wisnia\documents\visual studio 2013\Projects\SchoolWebsite\SchoolWebsite\obj\Debug\SchoolWebsite.pdb
+C:\Users\wisnia\Dysk Google\Projekty\SchoolWebsite\SchoolWebsite\bin\SchoolWebsite.dll.config
+C:\Users\wisnia\Dysk Google\Projekty\SchoolWebsite\SchoolWebsite\bin\SchoolWebsite.dll
+C:\Users\wisnia\Dysk Google\Projekty\SchoolWebsite\SchoolWebsite\bin\SchoolWebsite.pdb
+C:\Users\wisnia\Dysk Google\Projekty\SchoolWebsite\SchoolWebsite\bin\EntityFramework.dll
+C:\Users\wisnia\Dysk Google\Projekty\SchoolWebsite\SchoolWebsite\bin\EntityFramework.SqlServer.dll
+C:\Users\wisnia\Dysk Google\Projekty\SchoolWebsite\SchoolWebsite\bin\Ninject.dll
+C:\Users\wisnia\Dysk Google\Projekty\SchoolWebsite\SchoolWebsite\bin\System.Web.Helpers.dll
+C:\Users\wisnia\Dysk Google\Projekty\SchoolWebsite\SchoolWebsite\bin\System.Web.Mvc.dll
+C:\Users\wisnia\Dysk Google\Projekty\SchoolWebsite\SchoolWebsite\bin\System.Web.Razor.dll
+C:\Users\wisnia\Dysk Google\Projekty\SchoolWebsite\SchoolWebsite\bin\System.Web.Webpages.Deployment.dll
+C:\Users\wisnia\Dysk Google\Projekty\SchoolWebsite\SchoolWebsite\bin\System.Web.Webpages.dll
+C:\Users\wisnia\Dysk Google\Projekty\SchoolWebsite\SchoolWebsite\bin\System.Web.Webpages.Razor.dll
+C:\Users\wisnia\Dysk Google\Projekty\SchoolWebsite\SchoolWebsite\bin\EntityFramework.xml
+C:\Users\wisnia\Dysk Google\Projekty\SchoolWebsite\SchoolWebsite\bin\EntityFramework.SqlServer.xml
+C:\Users\wisnia\Dysk Google\Projekty\SchoolWebsite\SchoolWebsite\bin\Ninject.xml
+C:\Users\wisnia\Dysk Google\Projekty\SchoolWebsite\SchoolWebsite\bin\System.Web.Razor.xml
+C:\Users\wisnia\Dysk Google\Projekty\SchoolWebsite\SchoolWebsite\bin\System.Web.Webpages.xml
+C:\Users\wisnia\Dysk Google\Projekty\SchoolWebsite\SchoolWebsite\bin\System.Web.Webpages.Deployment.xml
+C:\Users\wisnia\Dysk Google\Projekty\SchoolWebsite\SchoolWebsite\bin\System.Web.Webpages.Razor.xml
+C:\Users\wisnia\Dysk Google\Projekty\SchoolWebsite\SchoolWebsite\bin\System.Web.Helpers.xml
+C:\Users\wisnia\Dysk Google\Projekty\SchoolWebsite\SchoolWebsite\bin\System.Web.Mvc.xml
+C:\Users\wisnia\Dysk Google\Projekty\SchoolWebsite\SchoolWebsite\obj\Debug\SchoolWebsite.dll
+C:\Users\wisnia\Dysk Google\Projekty\SchoolWebsite\SchoolWebsite\obj\Debug\SchoolWebsite.pdb
+C:\Users\wisnia\Dysk Google\Projekty\SchoolWebsite\SchoolWebsite\obj\Debug\SchoolWebsite.csprojResolveAssemblyReference.cache

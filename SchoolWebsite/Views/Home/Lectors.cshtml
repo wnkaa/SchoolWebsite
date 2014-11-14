@@ -1,0 +1,26 @@
+﻿@model IQueryable<SchoolWebsite.Models.Lector>
+@{
+    ViewBag.Title = "Lectors";
+    Layout = "~/Views/_LayoutPage.cshtml";
+}
+
+<h2>Lectors</h2>
+<div class="col-lg-6">
+    @foreach (var lector in Model)
+    {
+ 
+            <div style="border:1px solid red; margin-bottom:5px; height:200px">
+                @Html.DisplayFor(lect => lector.Title)
+                @Html.DisplayFor(lect => lector.Name)
+                @Html.DisplayFor(lect => lector.Surname)
+                <br />
+                @Html.DisplayFor(lect => lector.Text)
+                <img src="@lector.ImageUrl" class="pull-right img-thumbnail "  />
+
+            </div>
+    }
+
+
+</div>
+
+
