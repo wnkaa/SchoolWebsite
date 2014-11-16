@@ -25,8 +25,15 @@
                 <li><a href="@Url.Action("Lectors","Home")">Lectors</a></li>
                 <li><a href="@Url.Action("Index","Login")">Panel studenta</a></li>
                 <li><a href="@Url.Action("Contact","Home")">Contact</a></li>
+               
             </ul>
+            @if (User.Identity.IsAuthenticated)
+            {
+                <a class="pull-right" style="margin-top:10px" href="@Url.Action("LogOff","Login")">Log off </a>
+                
+            }
         </div>
+       
     </div>
     <div>
         @RenderBody()

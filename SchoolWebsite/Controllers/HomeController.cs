@@ -12,23 +12,20 @@ namespace SchoolWebsite.Controllers
     public class HomeController : Controller
     {
         private IMailSender mailSender;
-        private ILectorsRepository lectorRep;
+        private IRepository<Lector> lectorRep;
         private readonly Context ctx = new Context();
-        public HomeController(IMailSender ims)
+        public HomeController(IMailSender ims )
         {
             mailSender = ims;
-         //   lectorRep = ilr;
+            lectorRep = new RepositoryT<Lector>(ctx);
         }
         
         // GET: Home
         public ActionResult Index()
         {
-            RepositoryT<Lector> lektorzy = new RepositoryT<Lector>(ctx);
-            var spr = lektorzy.GetAll();
-            ViewBag.sprawdz = spr.FirstOrDefault().Name;
-
             return View();
         }
+
         public ActionResult About()
         {
             var przedmiot = ctx.Przedmioty.Where(p => p.Specie.Name == "Human").FirstOrDefault();
@@ -42,8 +39,8 @@ namespace SchoolWebsite.Controllers
         public ActionResult Lectors()
         {
 
-          //  var lektorzy = lectorRep.GetAll();
-            return View();
+            var lektorzy = lectorRep.GetAll();
+            return View(lektorzy);
         }
         public ActionResult Contact()
         {
@@ -60,20 +57,6 @@ namespace SchoolWebsite.Controllers
             }
             return View(model);
         }
-        public ActionResult Login()
-        {
-            return View();
-        }
-        [HttpPost]
-        public ActionResult Login(User usr, string returnUrl)
-        {
-            if (ModelState.IsValid)
-            {
-                string username = usr.Username;
-                string password = usr.Password;
-            }
-
-            return View();
-        }
+       
     }
 }

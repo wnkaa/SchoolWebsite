@@ -1,0 +1,36 @@
+﻿@model  User
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/_LayoutPage.cshtml";
+}
+
+
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+<div class="col-lg-12">
+    @using (Html.BeginForm("Index", "Login", FormMethod.Post, new { @class = "form-horizontal" }))
+    {
+        @Html.ValidationSummary(true)
+        <fieldset>
+            <legend>Enter your login</legend>
+            <div class="col-lg-6">
+                <div class="row">
+                    @Html.LabelFor(model => model.Username)
+                    <div class="col-mg-6">
+                        @Html.EditorFor(model => model.Username)
+                        @Html.ValidationMessageFor(model => model.Username)
+                    </div>
+                </div>
+                <div class="row">
+                    @Html.LabelFor(model => model.Password)
+                    <div class="col-mg-6">
+                        @Html.EditorFor(model => model.Password)
+                        @Html.ValidationMessageFor(model => model.Password)
+                    </div>
+                </div>
+                <input class="pull-left" style="margin-top:10px" type="submit" value="submit" />
+            </div>
+            
+        </fieldset>
+    }
+</div>

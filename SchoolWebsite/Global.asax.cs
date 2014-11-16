@@ -7,6 +7,7 @@ using System.Web.Routing;
 using SchoolWebsite.Ninject;
 using System.Data.Entity;
 using SchoolWebsite.Models;
+using System.Web.Security;
 namespace SchoolWebsite
 {
     public class MvcApplication : System.Web.HttpApplication
@@ -17,6 +18,29 @@ namespace SchoolWebsite
             DependencyResolver.SetResolver(new NinjectDependencyResolver());
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+        }
+        protected void Application_PostAuthenticateRequest(Object sender, EventArgs e)
+        {
+            if (FormsAuthentication.CookiesSupported == true)
+            {
+                try
+                {
+                    string username = FormsAuthentication.Decrypt(Request.Cookies[FormsAuthentication.FormsCookieName].Value).Name;
+                    string roles = string.Empty;
+                    using (SchoolDBConnectionStringEntities ctx = new SchoolDBConnectionStringEntities())
+                    {
+                        User user = ctx.Users.SingleOrDefault(u => u.Username == username);
+                        roles = user.Roles;
+                    }
+                    HttpContext.Current.User = new System.Security.Principal.GenericPrincipal(
+                        new System.Security.Principal.GenericIdentity(username,"Forms"),roles.Split(';')
+                        );
+                }
+                catch (Exception)
+                {
+
+                }
+            }
         }
     }
 }
