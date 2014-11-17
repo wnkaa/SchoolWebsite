@@ -51,8 +51,6 @@ namespace SchoolWebsite.Controllers
                     {
                         ModelState.AddModelError("", "The user name of password provided is incorrect");
                     }
-
-
                 }
                 
             }
