@@ -1,8 +1,39 @@
-﻿
+﻿@model IQueryable<SchoolWebsite.Models.Course>
 @{
     ViewBag.Title = "Education";
     Layout = "~/Views/_LayoutPage.cshtml";
 }
 
-<h2>Education</h2>
 
+<h2>Education</h2>
+@using(@Html.BeginForm("Education","Home",FormMethod.Get)){
+@Html.DropDownList("Rodzaj",(IEnumerable<SelectListItem>)ViewBag.Rodzaje)
+    <input type="submit" value="submit"/>
+}
+@if (Model != null)
+{
+    <table>
+        <thead>
+            <tr>
+                <td> @Html.LabelFor(model => model.FirstOrDefault().Name)</td>
+                <td> @Html.LabelFor(model => model.FirstOrDefault().PeopleLimit)</td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var kurs in Model)
+            {
+                <tr>
+                    <td>
+                      @Html.Label(kurs.Name)
+                    </td>
+                    <td>
+                       @Html.Label(kurs.PeopleLimit.ToString())
+                    </td>
+                    <td>
+                        @Html.ActionLink("Details", "Details", "Course", new { id = kurs.CourseID }, null)
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

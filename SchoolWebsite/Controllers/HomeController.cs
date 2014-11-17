@@ -13,11 +13,13 @@ namespace SchoolWebsite.Controllers
     {
         private IMailSender mailSender;
         private IRepository<Lector> lectorRep;
+        private IRepository<Course> courseRep;
         private readonly Context ctx = new Context();
         public HomeController(IMailSender ims )
         {
             mailSender = ims;
             lectorRep = new RepositoryT<Lector>(ctx);
+            courseRep = new RepositoryT<Course>(ctx);
         }
         
         // GET: Home
@@ -28,13 +30,22 @@ namespace SchoolWebsite.Controllers
 
         public ActionResult About()
         {
-            var przedmiot = ctx.Przedmioty.Where(p => p.Specie.Name == "Human").FirstOrDefault();
-            ViewBag.sprawdz = przedmiot.Name;
+           
             return View();
         }
-        public ActionResult Education()
+        [HttpGet]
+        public ActionResult Education(int Rodzaj=0)
         {
-            return View();
+            ViewBag.Rodzaje = new SelectList(ctx.Species, "SpecieID", "Name");
+            if (Rodzaj != 0)
+            {
+                var kursy = courseRep.GetAll();
+                var end = kursy.Where(x => x.Przedmioty.FirstOrDefault().SpecieID == Rodzaj);
+                return View(end);
+            }
+            else
+                return View();
+           
         }
         public ActionResult Lectors()
         {

@@ -1,0 +1,75 @@
+﻿@model SchoolWebsite.Models.Course
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/_LayoutPage.cshtml";
+}
+@if (Model != null)
+{
+    <div class="col-lg-12">
+        <h2>@Model.Name</h2>
+        <p>Limit studentów: @Model.PeopleLimit</p>
+        <div class="col-lg-6">
+            <h3>Lektorzy danego kursu</h3>
+            <table class="table-bordered col-lg-12">
+                <thead>
+                    <tr>
+                        <td>
+                            @Html.LabelFor(p => p.Lectors.FirstOrDefault().Title)
+                        </td>
+                        <td>
+                            @Html.LabelFor(p => p.Lectors.FirstOrDefault().Name)
+                        </td>
+                        <td>
+                            @Html.LabelFor(p => p.Lectors.FirstOrDefault().Surname)
+                        </td>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var lektor in Model.Lectors)
+                    {
+                        <tr>
+                            <td>
+                                @Html.Label(lektor.Title)
+                            </td>
+                            <td>
+                                @Html.Label(lektor.Name)
+                            </td>
+                            <td>
+                                @Html.Label(lektor.Surname)
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        <div class="col-lg-pull-6">
+            <h3>Przedmioty danego kursu</h3>
+            <table class="table-bordered col-lg-6">
+                <thead >
+                    <tr>
+                        <td>
+                            @Html.LabelFor(p=> p.Przedmioty.FirstOrDefault().Name)
+                        </td>
+                        <td>
+                            @Html.LabelFor(p => p.Przedmioty.FirstOrDefault().Specie)
+                        </td>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var przedmiot in Model.Przedmioty)
+                    {
+                        <tr>
+                            <td>
+                                @Html.Label(przedmiot.Name)
+                            </td>
+                            <td>
+                                @Html.Label(przedmiot.Specie.Name)
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+}
+
