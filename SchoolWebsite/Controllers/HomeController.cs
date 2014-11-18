@@ -25,6 +25,8 @@ namespace SchoolWebsite.Controllers
         // GET: Home
         public ActionResult Index()
         {
+            if (User.IsInRole("admin"))
+                return RedirectToAction("Index", "Admin");
             return View();
         }
 

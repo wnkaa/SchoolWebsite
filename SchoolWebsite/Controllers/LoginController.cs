@@ -33,7 +33,9 @@ namespace SchoolWebsite.Controllers
                     if (userValid)
                     {
                         FormsAuthentication.SetAuthCookie(username, false);
-                        
+                        if (User.IsInRole("admin"))
+                            return RedirectToAction("Index", "Admin");
+
                         if (Url.IsLocalUrl(returnURl) &&
                             returnURl.Length > 1 &&
                             returnURl.StartsWith("/") &&
@@ -42,7 +44,7 @@ namespace SchoolWebsite.Controllers
                         {
                             return Redirect(returnURl);
                         }
-                        else
+                        else 
                         {
                             return RedirectToAction("Index", "Home");
                         }
