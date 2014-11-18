@@ -1,0 +1,31 @@
+﻿@model IQueryable<SchoolWebsite.Models.Course>
+
+<div id="listaKursow">
+    @if (Model != null)
+    {
+        <table>
+            <thead>
+                <tr>
+                    <td> @Html.LabelFor(model => model.FirstOrDefault().Name)</td>
+                    <td> @Html.LabelFor(model => model.FirstOrDefault().PeopleLimit)</td>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var kurs in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.Label(kurs.Name)
+                        </td>
+                        <td>
+                            @Html.Label(kurs.PeopleLimit.ToString())
+                        </td>
+                        <td>
+                            @Html.ActionLink("Details", "Details", "Course", new { id = kurs.CourseID }, null)
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+</div>

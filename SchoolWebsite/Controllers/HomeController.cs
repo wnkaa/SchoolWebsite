@@ -34,19 +34,20 @@ namespace SchoolWebsite.Controllers
             return View();
         }
         [HttpGet]
-        public ActionResult Education(int Rodzaj=0)
+        public ActionResult Education(int Rodzaj =0)
         {
             ViewBag.Rodzaje = new SelectList(ctx.Species, "SpecieID", "Name");
-            if (Rodzaj != 0)
+            if (Request.IsAjaxRequest())
             {
                 var kursy = courseRep.GetAll();
                 var end = kursy.Where(x => x.Przedmioty.FirstOrDefault().SpecieID == Rodzaj);
-                return View(end);
+                return PartialView("_CourseList", end);
             }
             else
-                return View();
+            return View();
            
         }
+    
         public ActionResult Lectors()
         {
 
