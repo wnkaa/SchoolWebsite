@@ -1,0 +1,33 @@
+﻿@model IQueryable<SchoolWebsite.Models.Specie>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/_LayoutPage.cshtml";
+}
+
+<h2>Species</h2>
+<p>
+@Html.ActionLink("Create new", "Create", "Specie")
+</p>
+<br />
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(m=>m.FirstOrDefault().Name)
+        </th>
+    </tr>
+    @foreach (var specie in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(m => specie.Name)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new {id = specie.SpecieID })
+                @Html.ActionLink("Delete", "Delete", new { id = specie.SpecieID })
+            </td>
+        </tr>
+    }
+</table>
+
+
+

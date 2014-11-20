@@ -1,0 +1,24 @@
+﻿@model SchoolWebsite.Models.Przedmiot
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/_LayoutPage.cshtml";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken();
+    <div class="form-horizontal">
+        <div class="form-group">
+            @Html.LabelFor(m=> m.Name)
+            @Html.EditorFor(m => m.Name);
+            @Html.ValidationMessageFor(m => m.Name, "", new {@class="text-danger" })
+        </div>
+        <div class="form-horizontal">
+            @Html.LabelFor(m=>m.Specie)
+            @Html.DropDownList("SpecieID", (IEnumerable<SelectListItem>)ViewBag.SpecieID, new {@class = "dropdown-toggle" })
+        </div>
+    </div>
+    <input type="submit" value="Create new" class="btn btn-default" />
+}

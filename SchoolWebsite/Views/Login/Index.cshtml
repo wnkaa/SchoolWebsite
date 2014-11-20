@@ -1,4 +1,4 @@
-﻿@model  User
+﻿@model  SchoolWebsite.Models.User
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/_LayoutPage.cshtml";
@@ -15,10 +15,10 @@
             <legend>Enter your login</legend>
             <div class="col-lg-6">
                 <div class="row">
-                    @Html.LabelFor(model => model.Username, new { id="loginID" })
+                    @Html.LabelFor(model => model.Name, new { id="loginID" })
                     <div class="col-mg-6">
-                        @Html.EditorFor(model => model.Username)
-                        @Html.ValidationMessageFor(model => model.Username)
+                        @Html.EditorFor(model => model.Name)
+                        @Html.ValidationMessageFor(model => model.Name)
                     </div>
                 </div>
                 <div class="row">

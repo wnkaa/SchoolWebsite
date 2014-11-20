@@ -1,0 +1,34 @@
+﻿@model SchoolWebsite.Models.Specie
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/_LayoutPage.cshtml";
+}
+
+<h2>Edit</h2>
+<div class="col-lg-6">
+    <p> Current data</p>
+    <dl>
+        <dt>
+            @Html.DisplayNameFor(m => m.Name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(m=>m.Name)
+        </dd>
+    </dl>
+    <p class="pull-left">@Html.ActionLink("Go back to list", "Index")</p>
+</div>
+
+<div class="col-lg-6">
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <div class="form-horizontal">
+            @Html.LabelFor(m=>m.Name)
+            @Html.EditorFor(m=>m.Name)
+            @Html.ValidationMessageFor(m=>m.Name)
+        </div>
+        <br />
+        <input type="submit" value="Change data" class="btn btn-default" />
+    }
+</div>
+

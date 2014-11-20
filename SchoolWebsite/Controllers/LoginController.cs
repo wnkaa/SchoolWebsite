@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Security;
-
+using SchoolWebsite.Models;
 namespace SchoolWebsite.Controllers
 {
     public class LoginController : Controller
@@ -23,12 +23,12 @@ namespace SchoolWebsite.Controllers
         {
             if (ModelState.IsValid)
             {
-                using (SchoolDBConnectionStringEntities ctx = new SchoolDBConnectionStringEntities())
+                using (Context ctx = new Context())
                 {
-                    string username = usr.Username;
+                    string username = usr.Name;
                     string password = usr.Password;
                     //Check if any user with this password is on db
-                    bool userValid = ctx.Users.Any(user => user.Username == username && user.Password == password);
+                    bool userValid = ctx.Users.Any(user => user.Name == username && user.Password == password);
                     //if user was found in db
                     if (userValid)
                     {

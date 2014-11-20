@@ -17,6 +17,7 @@ namespace SchoolWebsite.Models
       public DbSet<Przedmiot> Przedmioty { get; set; }
       public DbSet<Specie> Species { get; set; }
       public DbSet<Course> Courses { get; set; }
+      public DbSet<User> Users { get; set; }
 
     }
 }

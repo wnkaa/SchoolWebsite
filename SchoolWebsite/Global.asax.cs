@@ -27,9 +27,9 @@ namespace SchoolWebsite
                 {
                     string username = FormsAuthentication.Decrypt(Request.Cookies[FormsAuthentication.FormsCookieName].Value).Name;
                     string roles = string.Empty;
-                    using (SchoolDBConnectionStringEntities ctx = new SchoolDBConnectionStringEntities())
+                    using (Context ctx = new Context())
                     {
-                        User user = ctx.Users.SingleOrDefault(u => u.Username == username);
+                        User user = ctx.Users.SingleOrDefault(u => u.Name == username);
                         roles = user.Roles;
                     }
                     HttpContext.Current.User = new System.Security.Principal.GenericPrincipal(

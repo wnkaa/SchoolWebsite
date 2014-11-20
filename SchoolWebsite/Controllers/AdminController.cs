@@ -6,10 +6,11 @@ using System.Web.Mvc;
 
 namespace SchoolWebsite.Controllers
 {
+    [Authorize(Roles = "admin")]
     public class AdminController : Controller
     {
         // GET: Admin
-        [Authorize(Roles="admin")]
+        
         public ActionResult Index()
         {
             return View();

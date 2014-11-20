@@ -201,7 +201,12 @@ namespace SchoolWebsite.Models
            fillListPrzedmioty(context);
            fillListLector(context);
            fillListCourse(context);
-
+            int id =1;
+            var users = new List<User>();
+            users.Add(new User() { UserID = id++, Name = "user", Password = "user", Roles = "user" });
+            users.Add(new User() { UserID = id++, Name = "admin", Password = "admin", Roles = "admin" });
+            context.Users.AddRange(users);
+            context.SaveChanges();
             base.Seed(context);
         }
     }
