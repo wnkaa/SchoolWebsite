@@ -7,7 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using SchoolWebsite.Models;
-
+using SchoolWebsite.Helpers;
 namespace SchoolWebsite.Controllers
 {
     public class CoursesController : Controller
@@ -46,7 +46,7 @@ namespace SchoolWebsite.Controllers
         // GET: Courses/Create
         public ActionResult Create()
         {
-            ViewBag
+            
             return View();
         }
 
@@ -74,6 +74,14 @@ namespace SchoolWebsite.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             Course course = repoCourse.Get(id);
+            ViewBag.AssignedPrzedmiots = DBhelper.assignedPrzedmiots(course);
+            List<Przedmiot> przedmioty = repoPrzedmiot.GetAll().ToList();
+            ViewBag.Przedmioty = przedmioty;
+
+            ViewBag.AssignedLectors = DBhelper.assignedLectors(course);
+            List<Lector> lectors = repoLector.GetAll().ToList();
+            ViewBag.Lectors = lectors;
+
             if (course == null)
             {
                 return HttpNotFound();
