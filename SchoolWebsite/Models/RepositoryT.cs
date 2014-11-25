@@ -43,9 +43,11 @@ namespace SchoolWebsite.Models
             ctx.SaveChanges();
         }
 
-        public void Edit(Type entity)
+        public void Edit(Type entity,int id)
         {
-            ctx.Entry(entity).State = System.Data.Entity.EntityState.Modified;
+            Type druga = Get(id);
+            ctx.Entry(druga).CurrentValues.SetValues(entity);
+           // ctx.Entry(entity).State = System.Data.Entity.EntityState.Modified;
             ctx.SaveChanges();
         }
         public void Dispose()

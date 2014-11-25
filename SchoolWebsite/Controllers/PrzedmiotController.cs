@@ -41,7 +41,7 @@ namespace SchoolWebsite.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include="Name,SpecieID")]Przedmiot prz)
+        public ActionResult Create([Bind(Include = "PrzedmiotID,Name,SpecieID")]Przedmiot prz)
         {
             if (ModelState.IsValid)
             {
@@ -68,11 +68,11 @@ namespace SchoolWebsite.Controllers
         //post przedmiot/edit
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Name,SpecieID")]Przedmiot prz)
+        public ActionResult Edit([Bind(Include = "PrzedmiotID,Name,SpecieID")]Przedmiot prz)
         {
             if (ModelState.IsValid)
             {
-                repoPrzedmioty.Edit(prz);
+                repoPrzedmioty.Edit(prz,prz.PrzedmiotID);
                 return RedirectToAction("Index");
             }
             ViewBag.SpecieID = new SelectList(repoSpecies.GetAll(), "SpecieID", "Name", prz.SpecieID);

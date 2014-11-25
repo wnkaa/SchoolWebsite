@@ -34,7 +34,7 @@ namespace SchoolWebsite.Controllers
    
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include="Name")] Specie specie)
+        public ActionResult Create([Bind(Include="SpecieID,Name")] Specie specie)
         {
             if (ModelState.IsValid)
             {
@@ -63,10 +63,10 @@ namespace SchoolWebsite.Controllers
     
         [HttpPost]
          [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include="Name")]Specie sp)
+        public ActionResult Edit([Bind(Include = "SpecieID,Name")]Specie sp)
          {
              if(ModelState.IsValid){
-                 repoSpecie.Edit(sp);
+                 repoSpecie.Edit(sp,sp.SpecieID);
                  return RedirectToAction("Index");
              }
              return View(sp);

@@ -32,7 +32,7 @@
                     @Html.ValidationMessageFor(model => model.PeopleLimit, "", new { @class = "text-danger" })
                 </div>
             </div>
-            <div class=" col-lg-offset-2 pull-left">
+            <div class="col-lg-10 col-lg-offset-2 pull-left" style="margin-bottom:10px">
                 <!--Checkboxes for przedmioty -->
                 <div class="">
                     <p>Przedmioty</p>
@@ -49,7 +49,7 @@
                                     @:</tr><tr>
 
                                     }
-                                    @:<td style="margin-right:10px">
+                                    @:<td style="padding-right:10px">
                                     <input type="checkbox"
                                            name="selectedPrzedmiot"
                                            value="@item.PrzedmiotID"
@@ -62,7 +62,7 @@
                     </table>
                 </div>
             </div>
-            <div class="form-group">
+            <div class="col-lg-10 col-lg-offset-2">
                 <p>Lektorzy</p>
                 <table>
                     <tr>
@@ -77,12 +77,14 @@
                                 {
                                     @:</tr><tr>
                                 }
-                                @: <td>
+                                @: <td style="padding-right:10px">
                                 <input type="checkbox"
                                        name="selectedLector"
                                        value="@item.LectorID"
                                        @(Html.Raw(assignedLectorsID.Any(x=>x ==item.LectorID) ? "checked=\"checked\"": "")) />
+                                @(item.Name +" "+ item.Surname)
                                 @:</td>
+
                             }
                         }
                     </tr>

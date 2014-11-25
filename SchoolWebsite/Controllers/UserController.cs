@@ -86,7 +86,7 @@ namespace SchoolWebsite.Controllers
         {
             if (ModelState.IsValid)
             {
-                repoUser.Edit(user);
+                repoUser.Edit(user,user.UserID);
                 return RedirectToAction("Index");
             }
             return View(user);

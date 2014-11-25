@@ -16,7 +16,7 @@ namespace SchoolWebsite.Models
         Type Get(int? id);
         void Add(Type entity);
         void Delete(Type entity);
-        void Edit(Type entity);
+        void Edit(Type entity,int id);
         
     }
 }
