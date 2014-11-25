@@ -1,9 +1,13 @@
-﻿
+﻿@model SchoolWebsite.Models.Student
 @{
     ViewBag.Title = "About";
     Layout = "~/Views/_LayoutPage.cshtml";
 }
 
 <h2>About</h2>
-
+<p>@ViewBag.User</p>
+<p>
+    @Model.Name
+    @Model.Surname
+</p>
 

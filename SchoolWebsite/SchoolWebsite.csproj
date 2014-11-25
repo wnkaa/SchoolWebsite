@@ -150,6 +150,7 @@
     <Compile Include="Models\Przedmiot.cs" />
     <Compile Include="Models\RepositoryT.cs" />
     <Compile Include="Models\Specie.cs" />
+    <Compile Include="Models\Student.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Ninject\NinjectDependencyResolver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

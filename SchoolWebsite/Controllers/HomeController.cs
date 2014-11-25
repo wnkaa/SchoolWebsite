@@ -32,8 +32,8 @@ namespace SchoolWebsite.Controllers
 
         public ActionResult About()
         {
-           
-            return View();
+            Student st = ctx.Students.FirstOrDefault(s => s.User.Name== User.Identity.Name);
+            return View(st);
         }
         [HttpGet]
         public ActionResult Education(int Rodzaj =0)
