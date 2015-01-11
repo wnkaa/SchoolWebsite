@@ -12,7 +12,7 @@ namespace SchoolWebsite.Helpers
         private SmtpClient smtpClinet = new SmtpClient("smtp.gmail.com", 587)
         {
             EnableSsl = true,
-            Credentials = new NetworkCredential("wisniacrims@gmail.com", "123456pw")
+            Credentials = new NetworkCredential("wisniacrims@gmail.com", "somepassword")
         };
         public void send(string emailAdr, string name, string content)
         {
